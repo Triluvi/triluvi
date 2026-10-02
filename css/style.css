@@ -36,6 +36,7 @@ html {
 
 body {
   margin: 0;
+  background: var(--p);
   color: var(--p);
   font-family: Manrope, Arial, sans-serif;
   line-height: 1.65;
