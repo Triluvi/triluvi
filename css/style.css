@@ -1037,7 +1037,9 @@ h2 em {
 .guide-product h2 {
 
   max-width: 700px;
-
+  font-size: clamp(2.8rem, 4vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 28px;
 }
 
 
@@ -1453,7 +1455,7 @@ footer {
 
   .section {
 
-    padding: 30px 0;
+    padding: 50px 0;
 
   }
 
