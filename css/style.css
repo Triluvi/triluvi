@@ -1127,6 +1127,19 @@ h2 em {
 
 }
 
+.article-product a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 15px 26px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--p);
+  font-weight: 700;
+  text-decoration: none;
+}
+
 /* CONCLUSION */
 
 .article-conclusion {
