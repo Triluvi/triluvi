@@ -31,11 +31,12 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   color: var(--p);
   font-family: Manrope, Arial, sans-serif;
   line-height: 1.65;
