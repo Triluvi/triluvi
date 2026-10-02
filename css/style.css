@@ -1039,9 +1039,12 @@ h2 em {
   max-width: 700px;
   font-size: clamp(2.8rem, 4vw, 4rem);
   line-height: 1.05;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
+.guide-cta .cta-box h2 {
+  line-height: 1.12;
+}
 
 .guide-product h2 em {
 
@@ -1463,10 +1466,11 @@ footer {
   }
 
   .footer-nav {
-  width: 100%;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
 
   .cta {
     padding-bottom: 40px;
