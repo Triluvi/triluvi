@@ -32,11 +32,14 @@
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+  background: var(--p);
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
+  background: var(--p);
   color: var(--p);
   font-family: Manrope, Arial, sans-serif;
   line-height: 1.65;
