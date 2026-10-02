@@ -1261,7 +1261,7 @@ footer {
 
   display: flex;
 
-  justify-content: center;
+  justify-content: space-between;
 
   gap: 40px;
 
@@ -1463,8 +1463,10 @@ footer {
   }
 
   .footer-nav {
-    flex-wrap: wrap;
-  }
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
   .cta {
     padding-bottom: 40px;
