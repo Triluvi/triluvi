@@ -1474,7 +1474,8 @@ footer {
 
   .cta-box {
 
-    padding: 40px 28px;
+    padding: 24px 24px;
+    gap: 15px;
 
   }
 
@@ -1483,6 +1484,7 @@ footer {
 
     flex-direction: column;
 
+
   }
 
 
@@ -1490,7 +1492,16 @@ footer {
 
     flex-wrap: wrap;
 
+
   }
+
+  .cta {
+  padding-bottom: 40px;
+}
+
+footer {
+  padding-top: 35px;
+}
 
 
   /* Artikel Mobile */
