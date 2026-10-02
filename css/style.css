@@ -1020,7 +1020,7 @@ h2 em {
 
 .article-hero h1 {
   max-width: 850px;
-  font-size: clamp(2.4rem, 9vw, 4.5rem);
+  font-size: clamp(2.4rem, 9vw, 4rem);
 }
 
 .article-hero h1 em {
