@@ -1078,15 +1078,11 @@ h2 em {
   background: var(--cream);
 }
 
-
-.guide-cta .cta-box {
-
-  background: #fff;
-
-  color: var(--p);
-
-  border: 1px solid var(--line);
+.guide-cta .btn.light {
+  background: var(--p);
+  color: #fff;
 }
+
 
 /* =========================================================
    ARTIKEL SEITEN
@@ -1467,9 +1463,9 @@ footer {
 
   .footer-nav {
     width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
   }
 
   .cta {
