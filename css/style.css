@@ -1769,3 +1769,12 @@ footer {
     display: inline;
   }
 }
+
+@media (max-width: 900px) {
+  #about,
+  #contact,
+  #kidstracker,
+  #magazin {
+    scroll-margin-top: 82px;
+  }
+}
