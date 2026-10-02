@@ -1727,3 +1727,13 @@ footer {
 
 
 }
+
+.mobile-break {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .mobile-break {
+    display: inline;
+  }
+}
