@@ -1557,3 +1557,17 @@ footer {
   font-weight: 700;
   text-decoration: none;
 }
+
+.article-pdf {
+  margin: 50px 0;
+  padding: 45px;
+  border-radius: 28px;
+  background: #ffffff !important;
+  border: 1px solid var(--line);
+}
+
+.article-pdf .btn {
+  margin-top: 24px;
+  background: #E58BE7 !important;
+  color: #ffffff !important;
+}
