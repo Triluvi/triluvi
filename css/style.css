@@ -1571,3 +1571,27 @@ footer {
   background: #E58BE7 !important;
   color: #ffffff !important;
 }
+
+/* =========================================================
+   IMPRESSUM
+   ========================================================= */
+
+.impressum-page .article-content {
+  background: #ffffff;
+}
+
+.impressum-page .article-step {
+  padding: 10px 0;
+  border-top: none;
+}
+
+.impressum-page .article-content > .container {
+  padding-top: 5px;
+}
+
+.impressum-page .article-narrow {
+  width: min(calc(100% - 48px), var(--max));
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
+}
