@@ -1135,6 +1135,35 @@ h2 em {
 
 }
 
+.article-pdf {
+  margin: 50px 0;
+  padding: 45px;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+}
+
+.article-pdf h2 {
+  max-width: 700px;
+  margin-bottom: 16px;
+}
+
+.article-pdf h2 em {
+  color: var(--pink);
+  font-style: normal;
+}
+
+.article-pdf p:not(.eyebrow) {
+  max-width: 620px;
+  color: var(--soft);
+}
+
+.article-pdf .btn {
+  margin-top: 24px;
+  background: var(--pink);
+  color: #fff;
+}
+
 /* ARTICLE CTA */
 
 .article-cta {
@@ -1514,6 +1543,8 @@ footer {
     flex-direction: column;
   }
 
+  }
+  
   .article-product a {
   display: inline-flex;
   align-items: center;
@@ -1525,6 +1556,4 @@ footer {
   color: var(--p);
   font-weight: 700;
   text-decoration: none;
-}
-
 }
