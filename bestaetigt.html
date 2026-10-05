@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#211A4D">
+  <title>E-Mail bestätigt – KidsTracker</title>
+  <meta name="description" content="Deine E-Mail-Adresse wurde für KidsTracker bestätigt.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .confirmation-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--cream);
+    }
+
+    .confirmation-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 72px 0 100px;
+    }
+
+    .confirmation-card {
+      width: min(100%, 700px);
+      margin: 0 auto;
+      padding: 56px 42px;
+      text-align: center;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+    }
+
+    .confirmation-mark {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--l);
+      color: var(--p);
+      font-family: Sora, Arial, sans-serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+    }
+
+    .confirmation-card h1 {
+      margin-bottom: 16px;
+      font-size: clamp(2.3rem, 5vw, 4.1rem);
+    }
+
+    .confirmation-card p {
+      max-width: 540px;
+      margin: 0 auto;
+      color: var(--soft);
+      line-height: 1.75;
+    }
+
+    .confirmation-note {
+      margin-top: 18px !important;
+      font-size: .92rem;
+    }
+
+    @media (max-width: 560px) {
+      .confirmation-main {
+        padding: 42px 0 70px;
+      }
+
+      .confirmation-card {
+        padding: 42px 22px;
+        border-radius: 22px;
+      }
+    }
+  </style>
+</head>
+<body class="confirmation-page">
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html#top">
+      <img src="assets/triluvi-logo.svg" alt="TRILUVI">
+      <span>TRILUVI</span>
+    </a>
+
+    <button class="menu" aria-label="Menü" aria-expanded="false">
+      <i></i><i></i><i></i>
+    </button>
+
+    <nav>
+      <a href="index.html#kidstracker">KidsTracker</a>
+      <a href="index.html#magazin">Magazin</a>
+      <a href="index.html#about">Über TRILUVI</a>
+      <a href="index.html#contact">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main class="confirmation-main">
+  <div class="container">
+    <section class="confirmation-card">
+      <div class="confirmation-mark">✓</div>
+      <p class="eyebrow">KIDSTRACKER · TRILUVI</p>
+      <h1>E-Mail bestätigt.</h1>
+      <p>Deine E-Mail-Adresse wurde erfolgreich bestätigt.</p>
+      <p class="confirmation-note">Du kannst die KidsTracker-App jetzt öffnen und dich anmelden.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div>
+      <a class="brand" href="index.html#top">
+        <img src="assets/triluvi-logo.svg" alt="">
+        <span>TRILUVI</span>
+      </a>
+      <p>Family life, simplified.</p>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html#kidstracker">KidsTracker</a>
+      <a href="index.html#magazin">Magazin</a>
+      <a href="index.html#about">Über TRILUVI</a>
+      <a href="index.html#contact">Kontakt</a>
+    </div>
+  </div>
+
+  <div class="container bottom">
+    <span>© <span id="year"></span> TRILUVI</span>
+    <span><a href="impressum.html">Impressum</a>&nbsp; · &nbsp;<a href="datenschutz.html">Datenschutz</a></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
