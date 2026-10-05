@@ -1639,7 +1639,7 @@ footer {
 
 .impressum-page .article-content > .container {
   padding-top: 10px;
-  padding-bottom: 90px;
+  padding-bottom: 30px;
 }
 
 @media (max-width: 560px) {
@@ -1663,4 +1663,41 @@ footer {
     line-height: 1.25;
   }
 
+}
+
+/* =========================================================
+   KIDSTRACKER SUPPORT
+   ========================================================= */
+
+.faq-item {
+  padding: 0 0 28px;
+  margin: 0 0 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.faq-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  letter-spacing: -.02em;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--soft);
+  line-height: 1.75;
+}
+
+.impressum-page .article-step a {
+  color: var(--p);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--pink);
+  text-underline-offset: 3px;
 }
