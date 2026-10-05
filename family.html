@@ -432,12 +432,14 @@
 
 
       if (!response.ok) {
-
-        app.innerHTML =
-          '<div class="family-error">Dieses Profil wurde nicht gefunden.</div>';
-
-        return;
-      }
+  app.innerHTML = `
+    <div class="family-error">
+      Fehler beim Laden.<br>
+      Status: ${response.status}
+    </div>
+  `;
+  return;
+}
 
 
       const data = await response.json();
