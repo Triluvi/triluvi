@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Familienprofil – KidsTracker by TRILUVI"
+  >
+
+  <meta name="theme-color" content="#211A4D">
+
+  <title>Familienprofil — KidsTracker</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* =========================================================
+       FAMILY PROFILE
+       ========================================================= */
+
+    .family-page {
+      background: #fff;
+    }
+
+    .family-hero {
+      padding: 70px 0 45px;
+    }
+
+    .family-hero h1 {
+      max-width: 820px;
+      font-size: clamp(2.7rem, 6vw, 4.6rem);
+      line-height: 1.08;
+    }
+
+    .family-content {
+      background: #fff;
+      padding-bottom: 90px;
+    }
+
+    .family-content .container {
+      max-width: 820px;
+    }
+
+    .family-kid {
+      margin-bottom: 65px;
+    }
+
+    .family-kid:last-child {
+      margin-bottom: 0;
+    }
+
+    .family-kid h2 {
+      margin-bottom: 8px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.15;
+    }
+
+    .family-birthdate {
+      margin-bottom: 28px;
+      color: var(--soft);
+      font-size: .95rem;
+    }
+
+    .family-card {
+      margin-bottom: 16px;
+      padding: 24px 26px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #fff;
+    }
+
+    .family-card h3 {
+      margin-bottom: 16px;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      letter-spacing: -.02em;
+    }
+
+    .family-size-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--p);
+      font-size: .95rem;
+    }
+
+    .family-size-row:last-child {
+      border-bottom: none;
+    }
+
+    .family-size-value {
+      color: var(--soft);
+      text-align: right;
+    }
+
+    .family-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .family-item:last-child {
+      border-bottom: none;
+    }
+
+    .family-item-name {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .family-item-category {
+      color: var(--soft);
+      font-weight: 400;
+      font-size: .9rem;
+    }
+
+    .family-item-meta {
+      margin-top: 4px;
+      color: var(--soft);
+      font-size: .85rem;
+    }
+
+    .family-item-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--p);
+      font-size: .88rem;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: var(--pink);
+      text-underline-offset: 3px;
+    }
+
+    .family-empty,
+    .family-loading,
+    .family-error {
+      color: var(--soft);
+    }
+
+    .family-loading,
+    .family-error {
+      padding: 40px 0;
+    }
+
+    .priority-hoch {
+      color: #c9603f;
+      font-weight: 700;
+    }
+
+    .priority-mittel {
+      color: #c98a3f;
+      font-weight: 700;
+    }
+
+    .priority-niedrig {
+      color: var(--soft);
+    }
+
+    @media (max-width: 560px) {
+
+      .family-hero {
+        padding-top: 50px;
+        padding-bottom: 35px;
+      }
+
+      .family-content {
+        padding-bottom: 70px;
+      }
+
+      .family-card {
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .family-kid {
+        margin-bottom: 50px;
+      }
+
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+  <div class="container nav">
+
+    <a class="brand" href="index.html">
+      <img
+        src="assets/triluvi-logo.svg"
+        alt="TRILUVI"
+      >
+      <span>TRILUVI</span>
+    </a>
+
+    <button
+      class="menu"
+      aria-label="Menü öffnen"
+      aria-expanded="false"
+    >
+      <i></i>
+      <i></i>
+      <i></i>
+    </button>
+
+    <nav>
+      <a href="kidstracker.html">KidsTracker</a>
+      <a href="ratgeber.html">Ratgeber</a>
+      <a href="index.html#about">Über TRILUVI</a>
+      <a href="index.html#contact">Kontakt</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main class="family-page">
+
+
+  <section class="family-hero">
+
+    <div class="container">
+
+      <p class="eyebrow">
+        KIDSTRACKER BY TRILUVI
+      </p>
+
+      <h1>
+        Familienprofil
+      </h1>
+
+    </div>
+
+  </section>
+
+
+  <section class="family-content">
+
+    <div
+      class="container"
+      id="app"
+    >
+
+      <div class="family-loading">
+        Lädt...
+      </div>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+<footer>
+
+  <div class="container footer">
+
+    <div>
+
+      <a class="brand" href="index.html">
+
+        <img
+          src="assets/triluvi-logo.svg"
+          alt="TRILUVI"
+        >
+
+        <span>TRILUVI</span>
+
+      </a>
+
+      <p>
+        Family life, simplified.
+      </p>
+
+    </div>
+
+
+    <div class="footer-nav">
+
+      <a href="index.html#kidstracker">KidsTracker</a>
+      <a href="ratgeber.html">Ratgeber</a>
+      <a href="index.html#about">Über TRILUVI</a>
+      <a href="index.html#contact">Kontakt</a>
+
+    </div>
+
+  </div>
+
+
+  <div class="container bottom">
+
+    <span>
+      © <span id="year"></span> TRILUVI
+    </span>
+
+    <span>
+      <a href="impressum.html">Impressum</a>
+      &nbsp; · &nbsp;
+      <a href="datenschutz.html">Datenschutz</a>
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+
+<script>
+  const SUPABASE_URL = "https://etszrafazjtpgfpmqgro.supabase.co";
+
+  const SUPABASE_ANON_KEY =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV0c3pyYWZhemp0cGdmcG1xZ3JvIiwicmVmIjoiZXRzenJhZmF6anRwZ2ZwbXFxZ3JvIiwiaWF0IjoxNzg1ODEwMDcsImV4cCI6MjEwMTE1NzAwN30.apE4i5jJ5TR7rpniFsqBxjc7E9gJGJH7GkFbFmbzDw0";
+
+  const FUNCTION_NAME = "get-shared-family";
+
+
+  function getToken() {
+
+    const params = new URLSearchParams(
+      window.location.search
+    );
+
+    return params.get("token");
+  }
+
+
+  function displayCategoryName(category) {
+
+    const map = {
+      oberteil: "Oberteil",
+      hose: "Hose",
+      schuhe: "Schuhe",
+      jacke: "Jacke",
+      schlafanzug: "Schlafanzug",
+      spielzeug: "Spielzeug",
+      kleidung: "Kleidung",
+      buecher: "Bücher",
+      sonstiges: "Sonstiges"
+    };
+
+    return map[category] || category;
+  }
+
+
+  function priorityLabel(priority) {
+
+    if (priority === 3) {
+      return '<span class="priority-hoch">Hohe Priorität</span>';
+    }
+
+    if (priority === 2) {
+      return '<span class="priority-mittel">Mittlere Priorität</span>';
+    }
+
+    return '<span class="priority-niedrig">Niedrige Priorität</span>';
+  }
+
+
+  function formatBirthdate(isoString) {
+
+    if (!isoString) {
+      return "";
+    }
+
+    const date = new Date(isoString);
+
+    return date.toLocaleDateString(
+      "de-DE",
+      {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      }
+    );
+  }
+
+
+  async function loadData() {
+
+    const token = getToken();
+
+    const app = document.getElementById("app");
+
+
+    if (!token) {
+
+      app.innerHTML =
+        '<div class="family-error">Kein gültiger Link.</div>';
+
+      return;
+    }
+
+
+    try {
+
+      const response = await fetch(
+        `${SUPABASE_URL}/functions/v1/${FUNCTION_NAME}`,
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
+            "apikey": SUPABASE_ANON_KEY
+          },
+
+          body: JSON.stringify({
+            token
+          })
+        }
+      );
+
+
+      if (!response.ok) {
+
+        app.innerHTML =
+          '<div class="family-error">Dieses Profil wurde nicht gefunden.</div>';
+
+        return;
+      }
+
+
+      const data = await response.json();
+
+      render(data);
+
+
+    } catch (err) {
+
+      app.innerHTML =
+        '<div class="family-error">Etwas ist schiefgelaufen. Bitte Link prüfen.</div>';
+
+    }
+
+  }
+
+
+  function itemHtml(
+    item,
+    showPriority = false
+  ) {
+
+    const priorityPart =
+      showPriority && item.priority
+        ? `<div class="family-item-meta">${priorityLabel(item.priority)}</div>`
+        : "";
+
+
+    const notePart =
+      item.note
+        ? `<div class="family-item-meta">${escapeHtml(item.note)}</div>`
+        : "";
+
+
+    const linkPart =
+      item.product_link
+        ? `
+          <a
+            class="family-item-link"
+            href="${escapeHtml(item.product_link)}"
+            target="_blank"
+            rel="noopener"
+          >
+            Produkt ansehen →
+          </a>
+        `
+        : "";
+
+
+    const claimedPart =
+      showPriority && item.is_claimed
+        ? `
+          <div
+            class="family-item-meta"
+            style="color:#5a9c6f;font-weight:700;"
+          >
+            ✓ Wird schon geschenkt
+            ${item.claimed_by
+              ? " von " + escapeHtml(item.claimed_by)
+              : ""}
+          </div>
+        `
+        : "";
+
+
+    const nameStyle =
+      showPriority && item.is_claimed
+        ? "text-decoration:line-through;opacity:0.6;"
+        : "";
+
+
+    return `
+      <div class="family-item">
+
+        <div
+          class="family-item-name"
+          style="${nameStyle}"
+        >
+          ${escapeHtml(item.name)}
+
+          <span class="family-item-category">
+            · ${displayCategoryName(item.category)}
+          </span>
+        </div>
+
+        ${priorityPart}
+        ${claimedPart}
+        ${notePart}
+        ${linkPart}
+
+      </div>
+    `;
+  }
+
+
+  function escapeHtml(str) {
+
+    const div = document.createElement("div");
+
+    div.textContent = str;
+
+    return div.innerHTML;
+  }
+
+
+  function render(data) {
+
+    const app =
+      document.getElementById("app");
+
+    const kidsList =
+      data.kids || [];
+
+
+    if (kidsList.length === 0) {
+
+      app.innerHTML =
+        '<div class="family-error">Keine Kinder gefunden.</div>';
+
+      return;
+    }
+
+
+    const sizeCategories = [
+      "oberteil",
+      "hose",
+      "schuhe",
+      "jacke",
+      "schlafanzug"
+    ];
+
+
+    app.innerHTML = kidsList
+      .map(
+        ({
+          kid,
+          sizes,
+          items
+        }) => {
+
+
+          const sizesHtml =
+            sizeCategories
+              .map(cat => {
+
+                const found =
+                  sizes.find(
+                    s => s.category === cat
+                  );
+
+
+                return `
+                  <div class="family-size-row">
+
+                    <span>
+                      ${displayCategoryName(cat)}
+                    </span>
+
+                    <span class="family-size-value">
+                      ${found ? found.size : "—"}
+                    </span>
+
+                  </div>
+                `;
+
+              })
+              .join("");
+
+
+          const vorhanden =
+            items.filter(
+              i => i.status === "vorhanden"
+            );
+
+
+          const gewuenscht =
+            items
+              .filter(
+                i => i.status === "gewuenscht"
+              )
+              .sort(
+                (a, b) =>
+                  (b.priority || 0) -
+                  (a.priority || 0)
+              );
+
+
+          const vorhandenHtml =
+            vorhanden.length
+              ? vorhanden
+                  .map(item => itemHtml(item))
+                  .join("")
+              : '<div class="family-empty">Noch nichts eingetragen</div>';
+
+
+          const gewuenschtHtml =
+            gewuenscht.length
+              ? gewuenscht
+                  .map(
+                    item => itemHtml(item, true)
+                  )
+                  .join("")
+              : '<div class="family-empty">Noch nichts gewünscht</div>';
+
+
+          return `
+
+            <div class="family-kid">
+
+              <h2>
+                ${escapeHtml(kid.name)}
+              </h2>
+
+              <div class="family-birthdate">
+                ${formatBirthdate(kid.birthdate)}
+              </div>
+
+
+              <div class="family-card">
+
+                <h3>
+                  Kleidergrößen
+                </h3>
+
+                ${sizesHtml}
+
+              </div>
+
+
+              <div class="family-card">
+
+                <h3>
+                  Bereits vorhanden
+                </h3>
+
+                ${vorhandenHtml}
+
+              </div>
+
+
+              <div class="family-card">
+
+                <h3>
+                  Wunschliste
+                </h3>
+
+                ${gewuenschtHtml}
+
+              </div>
+
+            </div>
+
+          `;
+        }
+      )
+      .join("");
+  }
+
+
+  loadData();
+</script>
+
+
+</body>
+</html>
