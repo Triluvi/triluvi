@@ -1640,13 +1640,14 @@ footer {
 @media (max-width: 560px) {
 
   .impressum-page .article-hero h1 {
-    font-size: 2.5rem;
-    line-height: 1.12;
+    font-size: 2.2rem;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
   }
 
   .impressum-page .article-content h2 {
-    font-size: 1.75rem;
-    line-height: 1.2;
+    font-size: 1.5rem;
+    line-height: 1.25;
   }
 
 }
