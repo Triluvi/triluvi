@@ -217,9 +217,12 @@
 <main class="kindprofil-main">
   <div class="container">
     <div class="kindprofil-intro">
-      <p class="eyebrow">KIDSTRACKER · KINDPROFIL</p>
-      <h1>Kindprofil</h1>
-      <p>Größen, vorhandene Dinge und Wünsche übersichtlich auf einen Blick.</p>
+      <p class="eyebrow">
+        KIDSTRACKER BY TRILUVI
+      </p>
+      <h1>
+        Kinderprofil
+      </h1>
     </div>
 
     <div class="container" id="app">
@@ -330,6 +333,20 @@ async function loadData() {
     app.innerHTML = '<div class="error">Etwas ist schiefgelaufen. Bitte Link prüfen.</div>';
   }
 }
+function favoriteColor(color) {
+  const map = {
+    appPink: "rgb(95%, 62%, 68%)",
+    appSkyBlue: "rgb(53%, 73%, 89%)",
+    appMint: "rgb(55%, 82%, 76%)",
+    appYellow: "rgb(96%, 78%, 38%)",
+    appLavender: "rgb(55%, 50%, 68%)",
+    appCoral: "rgb(91%, 57%, 42%)",
+    appGreen: "rgb(60%, 78%, 55%)",
+    appPeach: "rgb(87%, 79%, 65%)"
+  };
+
+  return map[color] || map.appPeach;
+}
 
 function render(data) {
   const { kid, sizes, items } = data;
@@ -361,6 +378,33 @@ function render(data) {
       <div class="kid-heading">
         <h1>${escapeHtml(kid.name)}</h1>
         <p class="birthdate">${formatBirthdate(kid.birthdate)}</p>
+       ${kid.interests ? `
+      <div style="
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:flex-start;
+        gap:8px;
+        margin-top:8px;
+        padding:0;
+        color:var(--soft);
+        font-size:.95rem;
+        line-height:1.6;
+        text-align:left;
+        ">
+      <span
+        style="
+        width:8px;
+        height:8px;
+        border-radius:50%;
+        background:${favoriteColor(kid.favorite_color)};
+        display:inline-block;
+        flex:0 0 auto;
+        "
+      ></span>
+    <span>${escapeHtml(kid.interests)}</span>
+  </div>
+` : ""}
       </div>
 
       <section class="profile-section">
