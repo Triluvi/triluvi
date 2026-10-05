@@ -1595,3 +1595,58 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* =========================================================
+   DATENSCHUTZ – OPTISCH WIE IMPRESSUM
+   ========================================================= */
+
+.impressum-page .article-content {
+  background: #ffffff;
+}
+
+.impressum-page .article-content > .container {
+  padding-top: 35px;
+  padding-bottom: 90px;
+}
+
+.impressum-page .article-step {
+  padding: 35px 0;
+  border-top: none;
+}
+
+.impressum-page .article-step h2 {
+  color: var(--p);
+}
+
+.impressum-page .article-step p,
+.impressum-page .article-step li {
+  color: var(--soft);
+  line-height: 1.75;
+}
+
+.impressum-page .article-step ul {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+.impressum-page .article-step a {
+  color: var(--p);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--pink);
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+
+  .impressum-page .article-hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.12;
+  }
+
+  .impressum-page .article-content h2 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+}
