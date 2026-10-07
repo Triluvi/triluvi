@@ -2152,6 +2152,7 @@ footer {
 .discover-icon {
   width: 72px;
   height: 72px;
+  flex: 0 0 auto;
   display: inline-grid;
   place-items: center;
   margin-bottom: 26px;
@@ -2162,10 +2163,11 @@ footer {
 
 .theme-icon svg,
 .discover-icon svg {
+  display: block;
   width: 42px;
   height: 42px;
   fill: none;
-  stroke: currentColor;
+  stroke: #211A4D;
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
