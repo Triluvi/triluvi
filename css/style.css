@@ -1905,3 +1905,14 @@ footer {
     white-space: normal;
   }
 }
+
+
+/* Mehr Luft im Family-life CTA */
+.guide-cta .cta-box h2 {
+  line-height: 1.22;
+}
+
+.guide-cta .cta-box h2 em {
+  display: block;
+  margin-top: 6px;
+}
