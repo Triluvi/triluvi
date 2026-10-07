@@ -1776,3 +1776,20 @@ footer {
 .article-card small {
   margin-bottom: 0;
 }
+
+
+/* Feinabstimmung: Beitragskarten kompakter */
+.cards .card h3,
+.article-card h3 {
+  margin-top: 14px;
+  margin-bottom: 18px;
+  line-height: 1.18;
+}
+
+.cards .card p,
+.article-card p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
