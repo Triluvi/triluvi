@@ -1,1 +1,5 @@
-const button=document.querySelector(".menu");const nav=document.querySelector(".nav nav");if(button&&nav){button.addEventListener("click",()=>{const open=nav.classList.toggle("open");button.setAttribute("aria-expanded",open)});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")))}document.querySelector("#year").textContent=new Date().getFullYear();
+const button=document.querySelector(".menu");const nav=document.querySelector(".nav nav");if(button&&nav){button.addEventListener("click",()=>{const open=nav.classList.toggle("open");button.setAttribute("aria-expanded",open)});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")))}
+
+const dropdown=document.querySelector(".nav-dropdown");const dropdownToggle=document.querySelector(".nav-dropdown-toggle");if(dropdown&&dropdownToggle){dropdownToggle.addEventListener("click",()=>{const open=dropdown.classList.toggle("open");dropdownToggle.setAttribute("aria-expanded",open)});document.addEventListener("click",event=>{if(!dropdown.contains(event.target)){dropdown.classList.remove("open");dropdownToggle.setAttribute("aria-expanded","false")}})}
+
+const year=document.querySelector("#year");if(year){year.textContent=new Date().getFullYear()};
