@@ -1935,3 +1935,15 @@ footer {
     white-space: normal;
   }
 }
+
+
+/* Family life, simplified. – deutlich mehr Zeilenabstand */
+.guide-cta .cta-box h2 {
+  line-height: 1.05;
+}
+
+.guide-cta .cta-box h2 em {
+  display: block;
+  margin-top: 22px;
+  line-height: 1.05;
+}
