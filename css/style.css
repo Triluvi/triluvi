@@ -2055,3 +2055,56 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================================
+   ENTDECKEN NAVIGATION
+   ========================================================= */
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle {
+  border: 0; background: transparent; color: inherit; font: inherit; font-weight: 700;
+  padding: 0; cursor: pointer;
+}
+.nav-dropdown-toggle span { margin-left: 4px; font-size: .8em; }
+.nav-dropdown-menu {
+  position: absolute; top: calc(100% + 18px); right: 0; min-width: 230px;
+  display: grid; gap: 2px; padding: 10px; background: #fff;
+  border: 1px solid var(--line); border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(33,26,77,.12);
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: .18s ease;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-dropdown-menu a { padding: 10px 12px; border-radius: 10px; font-size: .88rem; font-weight: 600; }
+.nav-dropdown-menu a:hover { background: var(--cream); }
+
+.discover-hero { padding-bottom: 70px; }
+.discover-hero h1 { font-size: clamp(3rem, 7vw, 5.8rem); }
+.discover-intro { max-width: 680px; margin: 28px auto 0; color: var(--soft); font-size: 1.1rem; }
+.discover-topics { background: var(--cream); }
+.discover-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.discover-card {
+  min-height: 330px; padding: 40px; border-radius: 28px; background: #fff;
+  border: 1px solid var(--line); transition: transform .2s ease, box-shadow .2s ease;
+}
+.discover-card:hover { transform: translateY(-4px); box-shadow: 0 18px 45px rgba(33,26,77,.08); }
+.discover-card > span { display: block; margin-bottom: 24px; font-size: 2.3rem; }
+.discover-card .eyebrow { margin-bottom: 10px; color: var(--pink); }
+.discover-card h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; }
+.discover-card > p:not(.eyebrow) { max-width: 560px; color: var(--soft); }
+.discover-card > a { display: inline-block; margin-top: 18px; font-weight: 700; }
+
+@media (max-width: 900px) {
+  .nav-dropdown { width: 100%; }
+  .nav-dropdown-toggle { text-align: left; width: 100%; }
+  .nav-dropdown-menu {
+    position: static; display: none; opacity: 1; visibility: visible; transform: none;
+    margin-top: 8px; box-shadow: none; border-radius: 14px; width: 100%;
+  }
+  .nav-dropdown.open .nav-dropdown-menu { display: grid; }
+  .discover-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .discover-card { padding: 28px; min-height: 0; }
+}
