@@ -1793,3 +1793,39 @@ footer {
   line-height: 1.6;
 }
 
+
+
+/* Feinabstimmung: klare Abstände innerhalb der Beitragskarten */
+.cards .card,
+.article-card {
+  justify-content: flex-start;
+}
+
+.cards .card small,
+.article-card small {
+  margin-bottom: 20px;
+}
+
+.cards .card h3,
+.article-card h3 {
+  margin-top: 0;
+  margin-bottom: 26px;
+  line-height: 1.18;
+}
+
+.cards .card p,
+.article-card p {
+  margin-top: 0;
+  margin-bottom: 26px;
+  line-height: 1.6;
+}
+
+.cards .card a,
+.article-card a {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.new-post .new-badge {
+  margin-bottom: 18px;
+}
