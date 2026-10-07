@@ -1947,3 +1947,15 @@ footer {
   margin-top: 22px;
   line-height: 1.05;
 }
+
+
+/* Family life, simplified. – Überlappung sicher vermeiden */
+.guide-cta .cta-box h2 {
+  line-height: 1.22 !important;
+}
+
+.guide-cta .cta-box h2 em {
+  display: block !important;
+  margin-top: 18px !important;
+  line-height: 1.22 !important;
+}
