@@ -1986,17 +1986,20 @@ footer {
 
 .triluvi-themes {
   background: #fff;
+  padding-top: 75px;
 }
 
+/* Der Themenbereich soll wie ein zusammengehöriger redaktioneller Einstieg wirken. */
 .triluvi-themes .heading {
-  align-items: end;
+  display: block;
 }
 
 .section-intro {
-  max-width: 430px;
-  margin: 0;
+  max-width: 680px;
+  margin: 24px 0 0;
   color: var(--soft);
   font-size: 1rem;
+  line-height: 1.7;
 }
 
 .theme-cards {
