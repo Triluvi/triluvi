@@ -1986,20 +1986,35 @@ footer {
 
 .triluvi-themes {
   background: #fff;
-  padding-top: 75px;
+  padding-top: 35px;
 }
 
-/* Der Themenbereich soll wie ein zusammengehöriger redaktioneller Einstieg wirken. */
+/* Überschrift und Beschreibung gehören als ein gemeinsamer Einstieg zusammen. */
 .triluvi-themes .heading {
   display: block;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.triluvi-themes .heading .eyebrow {
+  margin-bottom: 14px;
+}
+
+.triluvi-themes .heading h2 {
+  margin: 0;
 }
 
 .section-intro {
   max-width: 680px;
-  margin: 24px 0 0;
+  margin: 20px auto 0;
   color: var(--soft);
   font-size: 1rem;
   line-height: 1.7;
+}
+
+.triluvi-themes .theme-cards {
+  margin-top: 48px;
 }
 
 .theme-cards {
