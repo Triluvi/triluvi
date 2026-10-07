@@ -2269,3 +2269,13 @@ footer {
     height: 74px;
   }
 }
+
+
+.nav-mini-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: -5px;
+}
