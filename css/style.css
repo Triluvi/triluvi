@@ -1732,3 +1732,24 @@ footer {
 .new-post > small {
   display: block;
 }
+
+
+/* =========================================================
+   ABSTÄNDE IN BEITRAGSKARTEN
+   ========================================================= */
+
+.cards .card h3,
+.article-card h3 {
+  margin-top: 18px;
+  margin-bottom: 22px;
+  line-height: 1.18;
+}
+
+.article-card small {
+  margin-bottom: 12px;
+}
+
+.new-post .new-badge + small {
+  margin-top: 2px;
+}
+
