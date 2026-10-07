@@ -1855,3 +1855,41 @@ footer {
   margin-top: 0;
   padding-top: 0;
 }
+
+
+/* Ratgeber: feste, sichtbare Abstände innerhalb der Beitragskarten */
+.guide-articles .article-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.guide-articles .article-card > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.guide-articles .article-card > div:first-child small {
+  margin: 0 0 22px;
+}
+
+.guide-articles .article-card > div:first-child h3 {
+  margin: 0 0 28px;
+  line-height: 1.2;
+}
+
+.guide-articles .article-card > div:first-child p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.guide-articles .article-card > a {
+  margin-top: 30px !important;
+  padding-top: 0 !important;
+}
+
+.guide-articles .article-card .new-badge {
+  margin: 0 0 16px;
+}
+
