@@ -1893,3 +1893,15 @@ footer {
   margin: 0 0 16px;
 }
 
+
+
+/* KidsTracker-Headline im Artikel auf einer Zeile */
+.article-product-headline {
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .article-product-headline {
+    white-space: normal;
+  }
+}
