@@ -310,6 +310,8 @@ h2 em {
 
 .intro {
   text-align: center;
+  padding-top: 100px;
+  padding-bottom: 45px;
 }
 
 .intro > div > p:last-child {
