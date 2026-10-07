@@ -2009,7 +2009,7 @@ footer {
 
 .triluvi-themes .section-intro {
   width: min(100%, 470px);
-  margin: 0;
+  margin: 18px 0 0;
   color: var(--soft);
   font-size: 1rem;
   line-height: 1.7;
