@@ -2231,3 +2231,41 @@ footer {
     height: 38px;
   }
 }
+
+
+/* =========================================================
+   TRILUVI DISCOVERY ICON ASSETS
+   ========================================================= */
+
+.theme-icon-image,
+.discover-icon-image {
+  display: block;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  margin-bottom: 22px;
+  flex: 0 0 auto;
+}
+
+.discover-icon-image {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 22px;
+}
+
+.theme-card .theme-icon,
+.discover-card .discover-icon {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .theme-icon-image {
+    width: 68px;
+    height: 68px;
+  }
+
+  .discover-icon-image {
+    width: 74px;
+    height: 74px;
+  }
+}
