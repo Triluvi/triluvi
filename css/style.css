@@ -1916,3 +1916,22 @@ footer {
   display: block;
   margin-top: 6px;
 }
+
+
+/* KidsTracker-Headline wirklich in einer Zeile */
+.article-product-headline {
+  white-space: nowrap;
+}
+
+.article-product-headline em {
+  display: inline !important;
+  margin-top: 0 !important;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .article-product-headline,
+  .article-product-headline em {
+    white-space: normal;
+  }
+}
