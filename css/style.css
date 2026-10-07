@@ -1829,3 +1829,29 @@ footer {
 .new-post .new-badge {
   margin-bottom: 18px;
 }
+
+
+/* Ratgeber-Seite: Abstände der aktuellen Beiträge */
+.guide-articles .article-card {
+  justify-content: flex-start;
+}
+
+.guide-articles .article-card small {
+  display: block;
+  margin-bottom: 22px;
+}
+
+.guide-articles .article-card h3 {
+  margin: 0 0 28px;
+  line-height: 1.2;
+}
+
+.guide-articles .article-card p {
+  margin: 0 0 28px;
+  line-height: 1.65;
+}
+
+.guide-articles .article-card a {
+  margin-top: 0;
+  padding-top: 0;
+}
