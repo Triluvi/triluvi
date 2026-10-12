@@ -61,7 +61,11 @@
     @media(max-width:900px){.book-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.book-pin-list{grid-template-columns:1fr 1fr}}
     @media(max-width:760px){.book-grid,.book-pin-list{grid-template-columns:1fr}.book-hero:after{opacity:.25;right:1%}.book-steps{grid-template-columns:1fr}.book-section{padding:4rem 0}}
     @media(max-width:420px){.book-hero{padding:4rem 0}.book-chips span{font-size:.85rem}.book-card-copy{padding:1.25rem 1.2rem 0}}
-  </style>
+  
+.book-kicker{display:inline-flex;align-items:center;gap:.4rem}
+.book-kicker-icon{width:1.35rem;height:1.35rem;object-fit:contain;display:block;flex:0 0 auto}
+
+</style>
 </head>
 <body>
 <header class="header">
@@ -82,7 +86,7 @@
 <main class="book-page">
   <section class="book-hero">
     <div class="container narrow">
-      <span class="book-kicker">📚 TRILUVI Bücherwelt</span>
+      <span class="book-kicker"><img src="assets/icons/triluvi-buecher.png" alt="" class="book-kicker-icon"> TRILUVI Bücherwelt</span>
       <h1>Kleine Bücher.<br><span>Große Abenteuer.</span></h1>
       <p class="book-lead">Willkommen in der Bücherwelt von TRILUVI! Hier findest du Inspiration für neugierige kleine Leseratten, gemütliche Vorlesestunden und besondere Buchgeschenke. Lasst uns gemeinsam lesen, staunen und Geschichten erfinden.</p>
       <div class="book-chips"><span>🌈 Bilderbücher</span><span>🔎 Wimmelbücher</span><span>🌙 Vorlesezeit</span><span>🎁 Buchgeschenke</span></div>
