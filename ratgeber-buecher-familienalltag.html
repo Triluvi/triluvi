@@ -65,6 +65,24 @@
 .book-kicker{display:inline-flex;align-items:center;gap:.4rem}
 .book-kicker-icon{width:1.35rem;height:1.35rem;object-fit:contain;display:block;flex:0 0 auto}
 
+
+    .book-questions{position:relative;background:linear-gradient(180deg,#fff 0%,#f7f7f3 100%)}
+    .book-questions .container{max-width:1000px}
+    .book-questions .eyebrow{display:table;margin:0 auto 1rem;padding:.55rem .9rem;border-radius:999px;background:var(--l);color:var(--p)}
+    .book-questions .book-section-intro{margin-top:.5rem}
+    .book-questions .book-grid{gap:1.15rem;margin-top:2.25rem}
+    .book-questions .question-card{padding:1.5rem 1.6rem 1.7rem;text-align:left;border-radius:24px;box-shadow:0 10px 30px rgba(33,26,77,.06);transition:transform .2s ease,box-shadow .2s ease}
+    .book-questions .question-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(33,26,77,.1)}
+    .question-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem}
+    .question-number{font-family:Sora,Arial,sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.12em;color:var(--soft)}
+    .question-icon{display:grid;place-items:center;width:3rem;height:3rem;border-radius:18px;background:#e9e6ff;font-size:1.4rem}
+    .question-card:nth-child(2) .question-icon{background:#fbe5f7}
+    .question-card:nth-child(3) .question-icon{background:#e3efff}
+    .question-card:nth-child(4) .question-icon{background:#f8f1d9}
+    .book-questions .question-card h3{max-width:330px;font-size:1.15rem}
+    .book-questions .question-card p{font-size:.94rem}
+    .book-questions .book-note{padding:1rem 1.2rem;border-radius:16px;background:rgba(216,214,255,.35)}
+
 </style>
 </head>
 <body>
@@ -123,17 +141,18 @@
       </div>
     </div>
   </section>
-  <section class="book-section">
+  <section class="book-section book-questions">
     <div class="container">
-      <p class="eyebrow">SO FINDEST DU EIN PASSENDES BUCH</p>
+      <p class="eyebrow">DEIN KLEINER BÜCHER-CHECK</p>
       <h2>Vier Fragen vor dem Bücherkauf</h2>
+      <p class="book-section-intro">Mit diesen vier Fragen findest du leichter eine Geschichte, die zu eurem Familienalltag passt.</p>
       <div class="book-grid">
-        <article class="book-card"><h3>Was interessiert das Kind gerade?</h3><p>Tiere, Baustellen, Weltraum, Gefühle oder Abenteuer können ein guter Einstieg sein.</p></article>
-        <article class="book-card"><h3>Wie liest ihr am liebsten?</h3><p>Kurze Texte, Reime, Suchbilder oder längere Geschichten sprechen unterschiedliche Vorlieben an.</p></article>
-        <article class="book-card"><h3>Passt das Buch zum Entwicklungsstand?</h3><p>Nutze die Altersempfehlung als Orientierung und berücksichtige die individuellen Interessen des Kindes.</p></article>
-        <article class="book-card"><h3>Kann man gemeinsam ins Gespräch kommen?</h3><p>Bilder, Fragen und offene Enden laden dazu ein, eigene Gedanken und Geschichten zu teilen.</p></article>
+        <article class="book-card question-card"><div class="question-top"><span class="question-number">01</span><span class="question-icon">🔎</span></div><h3>Was interessiert das Kind gerade?</h3><p>Tiere, Baustellen, Weltraum, Gefühle oder Abenteuer können ein guter Einstieg sein.</p></article>
+        <article class="book-card question-card"><div class="question-top"><span class="question-number">02</span><span class="question-icon">💬</span></div><h3>Wie liest ihr am liebsten?</h3><p>Kurze Texte, Reime, Suchbilder oder längere Geschichten sprechen unterschiedliche Vorlieben an.</p></article>
+        <article class="book-card question-card"><div class="question-top"><span class="question-number">03</span><span class="question-icon">🌱</span></div><h3>Passt das Buch zum Entwicklungsstand?</h3><p>Nutze die Altersempfehlung als Orientierung und berücksichtige die individuellen Interessen des Kindes.</p></article>
+        <article class="book-card question-card"><div class="question-top"><span class="question-number">04</span><span class="question-icon">💜</span></div><h3>Kommt ihr gemeinsam ins Gespräch?</h3><p>Bilder, Fragen und offene Enden laden dazu ein, eigene Gedanken und Geschichten zu teilen.</p></article>
       </div>
-      <p class="book-note">Hinweis: Altersempfehlungen sind Orientierungshilfen. Kinder entwickeln unterschiedliche Interessen und Lesefähigkeiten.</p>
+      <p class="book-note">Kleiner Reminder: Altersempfehlungen sind Orientierungshilfen – jedes Kind entdeckt Bücher im eigenen Tempo.</p>
     </div>
   </section>
   <section class="book-section book-pinterest">
