@@ -90,6 +90,18 @@
     .book-pinterest .book-pin{transition:transform .2s ease,box-shadow .2s ease}
     .book-pinterest .book-pin:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(33,26,77,.09)}
 
+
+    .book-recommendations{background:#fff}
+    .book-recommendations .container{max-width:1050px}
+    .book-recommendation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;margin:2.5rem auto 0;text-align:left}
+    .book-recommendation{scroll-margin-top:2rem;padding:1.6rem;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#fff 0%,#faf9ff 100%);box-shadow:0 10px 30px rgba(33,26,77,.05)}
+    .book-recommendation-tag{display:inline-flex;padding:.4rem .7rem;border-radius:999px;background:var(--l);color:var(--p);font-size:.72rem;font-weight:800;letter-spacing:.03em}
+    .book-recommendation h3{font-family:Sora,Arial,sans-serif;font-size:1.2rem;line-height:1.35;margin:1rem 0 .6rem}
+    .book-recommendation p{margin:0 0 1rem;color:var(--soft);font-size:.94rem}
+    .book-recommendation a{display:inline-block;color:var(--p);font-weight:800;text-decoration-thickness:1px;text-underline-offset:4px}
+    .book-recommendation a:hover{color:#8c48b5}
+    @media(max-width:760px){.book-recommendation-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -160,6 +172,40 @@
         <article class="book-card question-card"><div class="question-top"><span class="question-number">04</span><span class="question-icon">💜</span></div><h3>Kommt ihr gemeinsam ins Gespräch?</h3><p>Bilder, Fragen und offene Enden laden dazu ein, eigene Gedanken und Geschichten zu teilen.</p></article>
       </div>
       <p class="book-note">Kleiner Reminder: Altersempfehlungen sind Orientierungshilfen – jedes Kind entdeckt Bücher im eigenen Tempo.</p>
+    </div>
+  </section>
+  <section class="book-section book-recommendations" id="buchtipps">
+    <div class="container">
+      <p class="eyebrow">UNSERE ERSTEN BUCHTIPPS</p>
+      <h2>Vier Bücher für kleine große Gefühle</h2>
+      <p class="book-section-intro">Diese Auswahl richtet sich an Familien mit Kindern von etwa 2 bis 6 Jahren. Die Altersempfehlung des Verlags ist eine Orientierung – du kennst dein Kind am besten.</p>
+      <div class="book-recommendation-grid">
+        <article class="book-recommendation" id="gefuehle">
+          <span class="book-recommendation-tag">Ab 18 Monaten</span>
+          <h3>Play+ Mein erstes Schiebebuch: Gefühle</h3>
+          <p>Ein interaktiver Einstieg in erste Gefühle – mit einfachen Situationen, die Kleinkinder gemeinsam mit Erwachsenen entdecken können.</p>
+          <a href="https://www.ravensburger.de/de-DE/produkte/kinderbuecher/babybuecher-pappbilderbuecher/gefuehle-45626" target="_blank" rel="noopener noreferrer">Beim Verlag ansehen ↗</a>
+        </article>
+        <article class="book-recommendation">
+          <span class="book-recommendation-tag">3–6 Jahre</span>
+          <h3>Theo und die schlechte Laune</h3>
+          <p>Ein humorvoller Vorlesetipp, um über miese Laune, Wut und darüber zu sprechen, dass Gefühle wieder vorbeigehen.</p>
+          <a href="https://www.ravensburger.de/de-DE/produkte/kinderbuecher/bilderbuecher-vorlesebuecher/theo-und-die-schlechte-laune-46424" target="_blank" rel="noopener noreferrer">Beim Verlag ansehen ↗</a>
+        </article>
+        <article class="book-recommendation" id="vorlesen">
+          <span class="book-recommendation-tag">3–6 Jahre</span>
+          <h3>Ella und das Drachenchaos</h3>
+          <p>Gefühle werden zu kleinen Drachen. Die Geschichte bietet viele Anlässe, beim Vorlesen innezuhalten und eigene Gefühle zu benennen.</p>
+          <a href="https://www.ravensburger.de/de-DE/produkte/kinderbuecher/bilderbuecher-vorlesebuecher/ella-und-das-drachenchaos-46473" target="_blank" rel="noopener noreferrer">Beim Verlag ansehen ↗</a>
+        </article>
+        <article class="book-recommendation" id="buchgeschenke">
+          <span class="book-recommendation-tag">3–6 Jahre</span>
+          <h3>Leo und der Sorgenbär</h3>
+          <p>Ein einfühlsames Geschenk für Kinder, die vor Neuem manchmal unsicher sind – zum Beispiel vor dem Start im Kindergarten.</p>
+          <a href="https://www.ravensburger.de/de-DE/produkte/kinderbuecher/bilderbuecher-vorlesebuecher/leo-und-der-sorgenbaer-46409" target="_blank" rel="noopener noreferrer">Beim Verlag ansehen ↗</a>
+        </article>
+      </div>
+      <p class="book-note">Die Links führen zu den offiziellen Verlagsseiten. Preise und Verfügbarkeit können sich ändern. TRILUVI erhält über diese normalen Links derzeit keine Provision.</p>
     </div>
   </section>
   <section class="book-section book-pinterest">
