@@ -13,36 +13,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    :root{--book-coral:#ff665e;--book-yellow:#ffd451;--book-blue:#55c7df;--book-mint:#a9dfc2;--book-pink:#ffb8d0;--book-ink:#173b55}
-    .book-page{color:var(--book-ink);overflow:hidden}
-    .book-hero{padding:clamp(3rem,7vw,6rem) 0;background:linear-gradient(135deg,#fff4df 0%,#fff 55%,#e8f9fc 100%);position:relative}
-    .book-hero:after{content:"✦  ♥  ✿";position:absolute;right:5%;top:10%;font-size:clamp(1.5rem,4vw,3.5rem);color:var(--book-coral);transform:rotate(9deg);letter-spacing:.35em}
+    /* TRILUVI-Bücherwelt: gleiche Markenfarben, Typografie und Rundungen wie die bestehende Website */
+    .book-page{color:var(--p);overflow:hidden}
+    .book-hero{padding:clamp(3rem,7vw,6rem) 0;background:linear-gradient(135deg,var(--cream) 0%,#fff 58%,#eeedff 100%);position:relative}
+    .book-hero:after{content:"✦  ♥  ✿";position:absolute;right:5%;top:10%;font-size:clamp(1.5rem,4vw,3.5rem);color:var(--pink);transform:rotate(9deg);letter-spacing:.35em}
     .book-hero .container{position:relative;z-index:1}
-    .book-kicker{display:inline-block;background:var(--book-yellow);padding:.55rem .9rem;border-radius:999px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-    .book-hero h1{font-family:Sora,sans-serif;font-size:clamp(2.5rem,6vw,5rem);line-height:1.08;max-width:850px;margin:1.1rem 0;color:var(--book-ink)}
-    .book-hero h1 span{color:#f45f57}
-    .book-lead{font-size:clamp(1.05rem,2vw,1.25rem);max-width:700px;line-height:1.8}
+    .book-kicker{display:inline-block;background:var(--l);color:var(--p);padding:.55rem .9rem;border-radius:999px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .book-hero h1{max-width:900px;font-family:Sora,sans-serif;font-size:clamp(2.8rem,6.5vw,5.6rem);line-height:1.08;margin:1.1rem 0;color:var(--p)}
+    .book-hero h1 span{color:var(--pink)}
+    .book-lead{font-size:clamp(1.05rem,2vw,1.25rem);max-width:700px;line-height:1.8;color:var(--soft)}
     .book-chips{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.5rem}
-    .book-chips span{padding:.65rem .9rem;border-radius:14px;font-weight:700;background:#fff;box-shadow:0 5px 18px #173b5510}
-    .book-section{padding:clamp(2.8rem,6vw,5rem) 0}
-    .book-section h2{font-family:Sora,sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.2;margin:.5rem 0 1rem}
-    .book-section-intro{max-width:720px;line-height:1.8}
+    .book-chips span{padding:.65rem .9rem;border-radius:14px;font-weight:700;background:#fff;border:1px solid var(--line)}
+    .book-section{padding:clamp(3.5rem,7vw,6rem) 0}
+    .book-section h2{font-family:Sora,sans-serif;font-size:clamp(2rem,4vw,3.5rem);line-height:1.2;margin:.5rem 0 1rem}
+    .book-section-intro{max-width:720px;line-height:1.8;color:var(--soft)}
     .book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;margin-top:2rem}
-    .book-card{padding:clamp(1.2rem,3vw,2rem);border-radius:24px;background:#fff;box-shadow:0 12px 35px #173b550d;border:1px solid #173b5510}
-    .book-card:nth-child(1){background:#fff0ed}.book-card:nth-child(2){background:#eafaff}.book-card:nth-child(3){background:#fff8d9}.book-card:nth-child(4){background:#edf9f1}
-    .book-emoji{font-size:2rem}.book-card h3{font-family:Sora,sans-serif;font-size:1.25rem;margin:.6rem 0}.book-card p{line-height:1.75;margin-bottom:0}
+    .book-card{padding:clamp(1.2rem,3vw,2rem);border-radius:28px;background:var(--cream);border:1px solid var(--line)}
+    .book-card:nth-child(1){background:#f7f1ff}.book-card:nth-child(2){background:#f0f0ff}.book-card:nth-child(3){background:#fff0f8}.book-card:nth-child(4){background:#f3f7ff}
+    .book-emoji{font-size:2rem}.book-card h3{font-family:Sora,sans-serif;font-size:1.25rem;margin:.6rem 0}.book-card p{line-height:1.75;margin-bottom:0;color:var(--soft)}
     .book-steps{counter-reset:step;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem;margin-top:2rem}
-    .book-step{background:#fff;border:1px solid #173b5512;border-radius:18px;padding:1rem;line-height:1.6}
-    .book-step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:2rem;height:2rem;background:var(--book-yellow);border-radius:50%;font-weight:800;margin-bottom:.7rem}
-    .book-callout{padding:clamp(1.5rem,4vw,3rem);border-radius:28px;background:linear-gradient(120deg,#e8f9fc,#fff0f4);margin-top:2rem}
-    .book-callout p{line-height:1.8;max-width:750px}
-    .book-pinterest{background:#fff4df}
+    .book-step{background:#fff;border:1px solid var(--line);border-radius:22px;padding:1rem;line-height:1.6}
+    .book-step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:2rem;height:2rem;background:var(--l);border-radius:50%;font-weight:800;margin-bottom:.7rem}
+    .book-callout{padding:clamp(1.5rem,4vw,3rem);border-radius:32px;background:linear-gradient(120deg,#f4f2ff,#fff0f8);margin-top:2rem}
+    .book-callout p{line-height:1.8;max-width:750px;color:var(--soft)}
+    .book-pinterest{background:var(--cream)}
     .book-pin-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}
-    .book-pin{background:white;border-radius:20px;padding:1.25rem;border-top:6px solid var(--book-coral)}
-    .book-pin:nth-child(2){border-color:#55c7df}.book-pin:nth-child(3){border-color:#ffd451}
-    .book-pin h3{font-family:Sora,sans-serif;font-size:1.1rem}.book-pin p{line-height:1.7}
-    .book-btn{display:inline-block;background:var(--book-ink);color:#fff!important;padding:.9rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:800;margin-top:.5rem}
-    .book-note{font-size:.88rem;opacity:.8}
+    .book-pin{background:#fff;border-radius:28px;padding:1.5rem;border:1px solid var(--line);border-top:5px solid var(--pink)}
+    .book-pin:nth-child(2){border-top-color:var(--v)}.book-pin:nth-child(3){border-top-color:var(--blue)}
+    .book-pin h3{font-family:Sora,sans-serif;font-size:1.1rem}.book-pin p{line-height:1.7;color:var(--soft)}
+    .book-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:999px;background:var(--p);color:#fff!important;text-decoration:none;font-weight:700;margin-top:1.2rem;transition:.2s}
+    .book-btn:hover{transform:translateY(-2px)}
+    .book-note{font-size:.88rem;color:var(--soft)}
     @media(max-width:760px){.book-grid,.book-pin-list{grid-template-columns:1fr}.book-steps{grid-template-columns:1fr 1fr}.book-hero:after{opacity:.35;right:1%}}
     @media(max-width:420px){.book-steps{grid-template-columns:1fr}}
   </style>
