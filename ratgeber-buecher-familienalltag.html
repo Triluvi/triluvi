@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinderbücher entdecken: Buchtipps für Familien | TRILUVI</title>
+  <meta name="description" content="Entdecke Bilderbücher, Wimmelbücher, Vorleserituale und Ideen für Buchgeschenke. Bunte Inspiration für kleine Leseratten bei TRILUVI.">
+  <meta property="og:title" content="Kinderbücher entdecken – kleine Geschichten, große Abenteuer | TRILUVI">
+  <meta property="og:description" content="Bunte Inspiration für kleine Leseratten: Bilderbücher, Wimmelbücher, Vorleserituale und Buchgeschenke.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root{--book-coral:#ff665e;--book-yellow:#ffd451;--book-blue:#55c7df;--book-mint:#a9dfc2;--book-pink:#ffb8d0;--book-ink:#173b55}
+    .book-page{color:var(--book-ink);overflow:hidden}
+    .book-hero{padding:clamp(3rem,7vw,6rem) 0;background:linear-gradient(135deg,#fff4df 0%,#fff 55%,#e8f9fc 100%);position:relative}
+    .book-hero:after{content:"✦  ♥  ✿";position:absolute;right:5%;top:10%;font-size:clamp(1.5rem,4vw,3.5rem);color:var(--book-coral);transform:rotate(9deg);letter-spacing:.35em}
+    .book-hero .container{position:relative;z-index:1}
+    .book-kicker{display:inline-block;background:var(--book-yellow);padding:.55rem .9rem;border-radius:999px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .book-hero h1{font-family:Sora,sans-serif;font-size:clamp(2.5rem,6vw,5rem);line-height:1.08;max-width:850px;margin:1.1rem 0;color:var(--book-ink)}
+    .book-hero h1 span{color:#f45f57}
+    .book-lead{font-size:clamp(1.05rem,2vw,1.25rem);max-width:700px;line-height:1.8}
+    .book-chips{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.5rem}
+    .book-chips span{padding:.65rem .9rem;border-radius:14px;font-weight:700;background:#fff;box-shadow:0 5px 18px #173b5510}
+    .book-section{padding:clamp(2.8rem,6vw,5rem) 0}
+    .book-section h2{font-family:Sora,sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.2;margin:.5rem 0 1rem}
+    .book-section-intro{max-width:720px;line-height:1.8}
+    .book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;margin-top:2rem}
+    .book-card{padding:clamp(1.2rem,3vw,2rem);border-radius:24px;background:#fff;box-shadow:0 12px 35px #173b550d;border:1px solid #173b5510}
+    .book-card:nth-child(1){background:#fff0ed}.book-card:nth-child(2){background:#eafaff}.book-card:nth-child(3){background:#fff8d9}.book-card:nth-child(4){background:#edf9f1}
+    .book-emoji{font-size:2rem}.book-card h3{font-family:Sora,sans-serif;font-size:1.25rem;margin:.6rem 0}.book-card p{line-height:1.75;margin-bottom:0}
+    .book-steps{counter-reset:step;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem;margin-top:2rem}
+    .book-step{background:#fff;border:1px solid #173b5512;border-radius:18px;padding:1rem;line-height:1.6}
+    .book-step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:2rem;height:2rem;background:var(--book-yellow);border-radius:50%;font-weight:800;margin-bottom:.7rem}
+    .book-callout{padding:clamp(1.5rem,4vw,3rem);border-radius:28px;background:linear-gradient(120deg,#e8f9fc,#fff0f4);margin-top:2rem}
+    .book-callout p{line-height:1.8;max-width:750px}
+    .book-pinterest{background:#fff4df}
+    .book-pin-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}
+    .book-pin{background:white;border-radius:20px;padding:1.25rem;border-top:6px solid var(--book-coral)}
+    .book-pin:nth-child(2){border-color:#55c7df}.book-pin:nth-child(3){border-color:#ffd451}
+    .book-pin h3{font-family:Sora,sans-serif;font-size:1.1rem}.book-pin p{line-height:1.7}
+    .book-btn{display:inline-block;background:var(--book-ink);color:#fff!important;padding:.9rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:800;margin-top:.5rem}
+    .book-note{font-size:.88rem;opacity:.8}
+    @media(max-width:760px){.book-grid,.book-pin-list{grid-template-columns:1fr}.book-steps{grid-template-columns:1fr 1fr}.book-hero:after{opacity:.35;right:1%}}
+    @media(max-width:420px){.book-steps{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a href="index.html" class="brand"><img src="assets/triluvi-logo.svg" alt="TRILUVI"><span>TRILUVI</span></a>
+    <button class="menu" aria-label="Menü öffnen" aria-expanded="false"><i></i><i></i><i></i></button>
+    <nav>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Entdecken <span>⌄</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="entdecken.html">Alle Themen</a><a href="entdecken.html#buecher">Bücher</a><a href="entdecken.html#basteln">Basteln &amp; DIY</a><a href="entdecken.html#rezepte">Rezepte</a><a href="entdecken.html#spielzeug">Spielen &amp; Spielzeug</a><a href="entdecken.html#unternehmungen">Unternehmungen</a><a href="entdecken.html#empfehlungen">Empfehlungen</a>
+        </div>
+      </div>
+      <a href="ratgeber.html">Ratgeber</a><a href="kidstracker.html">KidsTracker</a><a href="index.html#about">Über TRILUVI</a><a href="index.html#contact">Kontakt</a>
+    </nav>
+  </div>
+</header>
+<main class="book-page">
+  <section class="book-hero">
+    <div class="container narrow">
+      <span class="book-kicker">📚 TRILUVI Bücherwelt</span>
+      <h1>Kleine Bücher.<br><span>Große Abenteuer.</span></h1>
+      <p class="book-lead">Willkommen in der Bücherwelt von TRILUVI! Hier findest du Inspiration für neugierige kleine Leseratten, gemütliche Vorlesestunden und besondere Buchgeschenke. Lasst uns gemeinsam lesen, staunen und Geschichten erfinden.</p>
+      <div class="book-chips"><span>🌈 Bilderbücher</span><span>🔎 Wimmelbücher</span><span>🌙 Vorlesezeit</span><span>🎁 Buchgeschenke</span></div>
+    </div>
+  </section>
+  <section class="book-section">
+    <div class="container">
+      <p class="eyebrow">FINDE EURE NÄCHSTE LIEBLINGSWELT</p>
+      <h2>Welche Bücher passen zu euch?</h2>
+      <p class="book-section-intro">Jedes Kind entdeckt Geschichten anders. Manche lieben bunte Bilder, andere suchen winzige Details oder möchten vor dem Schlafengehen in fantastische Welten eintauchen. Diese vier Buchwelten helfen dir beim Stöbern.</p>
+      <div class="book-grid">
+        <article class="book-card"><div class="book-emoji">🦊📖</div><h3>Bilderbücher für kleine Entdecker</h3><p>Farbenfrohe Illustrationen, erste Geschichten und jede Menge Gesprächsstoff. Schaut gemeinsam die Bilder an, fragt euch, was als Nächstes passieren könnte, und erfindet eigene Geschichten dazu.</p></article>
+        <article class="book-card"><div class="book-emoji">🔎🌳</div><h3>Wimmelbücher zum Staunen</h3><p>Suchen, finden und immer wieder Neues entdecken: Wimmelbücher laden zum genauen Hinsehen ein. Lasst euch gegenseitig kleine Suchaufgaben stellen und erzählt, was auf den Seiten passiert.</p></article>
+        <article class="book-card"><div class="book-emoji">🌙🧸</div><h3>Vorlesebücher für gemütliche Abende</h3><p>Macht es euch bequem und wählt eine Geschichte, auf die ihr euch freut. Ein wiederkehrendes Buchritual kann den Tag ruhig ausklingen lassen – ganz ohne lange Vorbereitung.</p></article>
+        <article class="book-card"><div class="book-emoji">🎁🌈</div><h3>Buchgeschenke für Kinder</h3><p>Ein gutes Buchgeschenk passt zu den Interessen des Kindes: Tiere, Fahrzeuge, Natur, Freundschaft oder Fantasie. Achte auf Altersempfehlung, Textlänge und darauf, ob das Kind gerne zuhört oder selbst entdeckt.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="book-section" style="background:#f2fbfc">
+    <div class="container">
+      <p class="eyebrow">KLEINER LESE-STARTER</p>
+      <h2>5 Ideen für gemütliche Lesestunden</h2>
+      <p class="book-section-intro">Du brauchst kein aufwendiges Programm. Schon kleine Veränderungen machen die gemeinsame Lesezeit besonders.</p>
+      <div class="book-steps">
+        <div class="book-step"><strong>Eine Lesehöhle bauen</strong><br>Decke über zwei Stühle, Kissen dazu – fertig ist euer Geschichtenversteck.</div>
+        <div class="book-step"><strong>Das Kind wählen lassen</strong><br>Legt zwei oder drei Bücher bereit und lasst die kleine Leseratte entscheiden.</div>
+        <div class="book-step"><strong>Bilder erforschen</strong><br>Fragt: Was entdeckst du? Was könnte gleich passieren?</div>
+        <div class="book-step"><strong>Stimmen ausprobieren</strong><br>Gebt Figuren unterschiedliche Stimmen oder passende Geräusche.</div>
+        <div class="book-step"><strong>Lieblingsstelle wiederholen</strong><br>Ein vertrauter Satz oder eine Lieblingsseite darf ruhig noch einmal dran sein.</div>
+      </div>
+      <div class="book-callout">
+        <h2>Lesen darf leicht sein.</h2>
+        <p>Manchmal sind fünf gemeinsame Minuten genau richtig. Es geht nicht darum, möglichst viele Seiten zu schaffen, sondern um Neugier, Nähe und Freude an Geschichten. Wenn die Aufmerksamkeit nachlässt, könnt ihr einfach morgen weiterlesen.</p>
+      </div>
+    </div>
+  </section>
+  <section class="book-section">
+    <div class="container">
+      <p class="eyebrow">SO FINDEST DU EIN PASSENDES BUCH</p>
+      <h2>Vier Fragen vor dem Bücherkauf</h2>
+      <div class="book-grid">
+        <article class="book-card"><h3>Was interessiert das Kind gerade?</h3><p>Tiere, Baustellen, Weltraum, Gefühle oder Abenteuer können ein guter Einstieg sein.</p></article>
+        <article class="book-card"><h3>Wie liest ihr am liebsten?</h3><p>Kurze Texte, Reime, Suchbilder oder längere Geschichten sprechen unterschiedliche Vorlieben an.</p></article>
+        <article class="book-card"><h3>Passt das Buch zum Entwicklungsstand?</h3><p>Nutze die Altersempfehlung als Orientierung und berücksichtige die individuellen Interessen des Kindes.</p></article>
+        <article class="book-card"><h3>Kann man gemeinsam ins Gespräch kommen?</h3><p>Bilder, Fragen und offene Enden laden dazu ein, eigene Gedanken und Geschichten zu teilen.</p></article>
+      </div>
+      <p class="book-note">Hinweis: Altersempfehlungen sind Orientierungshilfen. Kinder entwickeln unterschiedliche Interessen und Lesefähigkeiten.</p>
+    </div>
+  </section>
+  <section class="book-section book-pinterest">
+    <div class="container">
+      <p class="eyebrow">IDEEN ZUM MERKEN & TEILEN</p>
+      <h2>Entdecke TRILUVI auch auf Pinterest</h2>
+      <p class="book-section-intro">Du möchtest dir Ideen für später merken? Diese Themen eignen sich besonders gut für deine nächste Lesezeit. Speichere dir die Seite oder teile sie mit anderen Familien.</p>
+      <div class="book-pin-list">
+        <article class="book-pin"><h3>📚 Kinderbücher entdecken</h3><p>Buchtipps und Ideen für kleine Leseratten – von Bilderbüchern bis zu Wimmelwelten.</p></article>
+        <article class="book-pin"><h3>🏕️ 5 gemütliche Lesestunden</h3><p>Einfache Ideen für eine Lesehöhle, gemeinsame Bilderabenteuer und ruhige Familienmomente.</p></article>
+        <article class="book-pin"><h3>🎁 Buchgeschenke für Kinder</h3><p>So findest du ein Buch, das zu den Interessen und Vorlieben eines Kindes passt.</p></article>
+      </div>
+      <a class="book-btn" href="entdecken.html#buecher">← Zurück zu TRILUVI Entdecken</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container footer"><div><a href="index.html" class="brand"><img src="assets/triluvi-logo.svg" alt="TRILUVI"><span>TRILUVI</span></a><p>Family life, simplified.</p></div><div class="footer-nav"><a href="kidstracker.html">KidsTracker</a><a href="ratgeber.html">Ratgeber</a><a href="entdecken.html">Entdecken</a><a href="index.html#about">Über TRILUVI</a><a href="index.html#contact">Kontakt</a></div></div>
+  <div class="container bottom"><span>© 2026 TRILUVI</span><span><a href="impressum.html">Impressum</a> &nbsp; · &nbsp; <a href="datenschutz.html">Datenschutz</a></span></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
