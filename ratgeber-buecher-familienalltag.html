@@ -13,40 +13,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Bücherbereich nutzt bewusst das bestehende TRILUVI-Designsystem */
     .book-page{color:var(--p);overflow:hidden}
-    .book-hero{padding:80px 0 100px;background:var(--cream);position:relative}
+    .book-page p{line-height:1.8}
+    .book-hero{padding:clamp(4rem,8vw,7rem) 0;background:var(--cream);position:relative;text-align:center}
     .book-hero:after{content:"✦  ♥  ✿";position:absolute;right:6%;top:12%;font-size:clamp(1.5rem,4vw,3rem);color:var(--pink);opacity:.8;letter-spacing:.25em}
-    .book-hero .container{position:relative;z-index:1}
-    .book-kicker{display:inline-block;background:var(--l);color:var(--p);padding:.5rem .85rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-    .book-hero h1{max-width:850px;font-family:Sora,Arial,sans-serif;font-size:clamp(3rem,6vw,5.5rem);line-height:1.12;margin:1.2rem 0;color:var(--p);letter-spacing:-.045em}
-    .book-hero h1 span{color:var(--pink)}
-    .book-lead{font-size:1.12rem;max-width:700px;line-height:1.8;color:var(--soft)}
-    .book-chips{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.5rem}
-    .book-chips span{padding:.65rem .9rem;border-radius:999px;font-weight:700;background:#fff;border:1px solid var(--line)}
-    .book-section{padding:clamp(4rem,8vw,7.5rem) 0}
-    .book-section h2{font-family:Sora,Arial,sans-serif;font-size:clamp(2.4rem,4.5vw,4rem);line-height:1.2;letter-spacing:-.045em;margin:.5rem 0 1rem}
-    .book-section-intro{max-width:720px;line-height:1.8;color:var(--soft)}
-    .book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin-top:2.5rem}
-    .book-card{padding:clamp(1.5rem,3vw,2.25rem);border-radius:28px;background:var(--cream);border:1px solid var(--line)}
-    .book-card:nth-child(1){background:#f7f7f3}.book-card:nth-child(2){background:#f1f0ff}.book-card:nth-child(3){background:#fbf0fa}.book-card:nth-child(4){background:#eff5ff}
-    .book-emoji{font-size:2rem}.book-card h3{font-family:Sora,Arial,sans-serif;font-size:1.35rem;margin:.7rem 0}.book-card p{line-height:1.75;margin-bottom:0;color:var(--soft)}
-    .book-steps{counter-reset:step;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;margin-top:2.5rem}
-    .book-step{background:#fff;border:1px solid var(--line);border-radius:24px;padding:1.2rem;line-height:1.65}
-    .book-step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:2rem;height:2rem;background:var(--l);border-radius:50%;font-weight:800;margin-bottom:.8rem}
-    .book-callout{padding:clamp(2rem,4vw,3.5rem);border-radius:32px;background:var(--p);color:#fff;margin-top:2.5rem}
-    .book-callout p{line-height:1.8;max-width:750px;color:rgba(255,255,255,.76)}
+    .book-hero .container{position:relative;z-index:1;margin-inline:auto}
+    .book-kicker{display:inline-block;background:var(--l);color:var(--p);padding:.55rem 1rem;border-radius:999px;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+    .book-hero h1{max-width:850px;margin:1.25rem auto;font-family:Sora,Arial,sans-serif;font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.08;letter-spacing:-.05em}
+    .book-hero h1 span{display:block;color:var(--pink)}
+    .book-lead{max-width:680px;margin:0 auto;color:var(--soft);font-size:1.08rem}
+    .book-chips{display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap;margin:1.8rem auto 0}
+    .book-chips span{padding:.65rem .95rem;border-radius:999px;font-weight:700;background:#fff;border:1px solid var(--line)}
+    .book-section{padding:clamp(4rem,7vw,6.5rem) 0}
+    .book-section>.container{text-align:center}
+    .book-section .eyebrow{margin:0 0 1rem;color:var(--soft);font-size:.72rem;font-weight:800;letter-spacing:.14em}
+    .book-section h2{max-width:850px;margin:0 auto 1rem;font-family:Sora,Arial,sans-serif;font-size:clamp(2rem,4vw,3.5rem);line-height:1.15;letter-spacing:-.045em}
+    .book-section-intro{max-width:700px;margin:0 auto;color:var(--soft)}
+    .book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin:2.75rem auto 0;text-align:center}
+    .book-card{padding:0 0 1.8rem;overflow:hidden;border-radius:28px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 34px rgba(33,26,77,.045)}
+    .book-art{min-height:175px;display:grid;place-items:center;position:relative;overflow:hidden;font-size:3.5rem}
+    .book-art:before,.book-art:after{content:"";position:absolute;border-radius:50%;opacity:.65}
+    .book-art:before{width:135px;height:135px;left:calc(50% - 67px);top:20px;background:rgba(255,255,255,.55)}
+    .book-art:after{width:70px;height:70px;right:15%;bottom:-15px;background:rgba(255,255,255,.6)}
+    .book-art span{position:relative;z-index:1;filter:drop-shadow(0 5px 3px rgba(33,26,77,.08))}
+    .book-art.art-lavender{background:#e9e6ff}.book-art.art-pink{background:#fbe5f7}.book-art.art-blue{background:#e3efff}.book-art.art-cream{background:#f8f1d9}
+    .book-card-copy{padding:1.5rem 1.7rem 0}
+    .book-card h3{font-family:Sora,Arial,sans-serif;font-size:1.25rem;line-height:1.35;margin:0 0 .7rem}
+    .book-card p{margin:0;color:var(--soft);font-size:.95rem}
+    .book-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;margin:2.75rem auto 0;text-align:left}
+    .book-step{background:#fff;border:1px solid var(--line);border-radius:24px;padding:1.3rem;line-height:1.65}
+    .book-step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:2.25rem;height:2.25rem;background:var(--l);border-radius:50%;font-weight:800;margin:0 auto 1rem}
+    .book-steps{counter-reset:step}
+    .book-step strong{display:block;text-align:center;margin-bottom:.55rem}
+    .book-callout{max-width:900px;margin:2.5rem auto 0;padding:clamp(2rem,4vw,3.5rem);border-radius:32px;background:var(--p);color:#fff;text-align:center}
+    .book-callout h2{color:#fff}
+    .book-callout p{max-width:700px;margin:1rem auto 0;color:rgba(255,255,255,.78)}
     .book-pinterest{background:var(--cream)}
-    .book-pin-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin-top:2.5rem}
-    .book-pin{background:#fff;border-radius:28px;padding:1.75rem;border:1px solid var(--line);border-top:4px solid var(--pink)}
-    .book-pin:nth-child(2){border-top-color:var(--v)}.book-pin:nth-child(3){border-top-color:var(--blue)}
-    .book-pin h3{font-family:Sora,Arial,sans-serif;font-size:1.2rem}.book-pin p{line-height:1.7;color:var(--soft)}
-    .book-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:999px;background:var(--p);color:#fff!important;text-decoration:none;font-weight:700;margin-top:1.2rem;transition:.2s}
+    .book-pin-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin:2.75rem auto 0;text-align:center}
+    .book-pin{overflow:hidden;background:#fff;border-radius:28px;padding:0 1.5rem 1.6rem;border:1px solid var(--line);box-shadow:0 12px 34px rgba(33,26,77,.04)}
+    .book-pin-art{display:grid;place-items:center;min-height:145px;margin:0 -1.5rem 1.35rem;background:#fbe5f7;font-size:2.8rem}
+    .book-pin:nth-child(2) .book-pin-art{background:#e9e6ff}.book-pin:nth-child(3) .book-pin-art{background:#e3efff}
+    .book-pin h3{font-family:Sora,Arial,sans-serif;font-size:1.15rem;line-height:1.35;margin:0 0 .65rem}
+    .book-pin p{margin:0;color:var(--soft);font-size:.94rem}
+    .book-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:999px;background:var(--p);color:#fff!important;text-decoration:none;font-weight:700;margin-top:2rem;transition:.2s}
     .book-btn:hover{transform:translateY(-2px)}
-    .book-note{font-size:.88rem;color:var(--soft)}
-    @media(max-width:900px){.book-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    @media(max-width:760px){.book-grid,.book-pin-list{grid-template-columns:1fr}.book-steps{grid-template-columns:1fr 1fr}.book-hero:after{opacity:.35;right:1%}}
-    @media(max-width:420px){.book-steps{grid-template-columns:1fr}.book-hero{padding:65px 0 75px}}
+    .book-note{max-width:700px;margin:1.5rem auto 0;font-size:.88rem;color:var(--soft)}
+    @media(max-width:900px){.book-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.book-pin-list{grid-template-columns:1fr 1fr}}
+    @media(max-width:760px){.book-grid,.book-pin-list{grid-template-columns:1fr}.book-hero:after{opacity:.25;right:1%}.book-steps{grid-template-columns:1fr}.book-section{padding:4rem 0}}
+    @media(max-width:420px){.book-hero{padding:4rem 0}.book-chips span{font-size:.85rem}.book-card-copy{padding:1.25rem 1.2rem 0}}
   </style>
 </head>
 <body>
@@ -80,10 +94,10 @@
       <h2>Welche Bücher passen zu euch?</h2>
       <p class="book-section-intro">Jedes Kind entdeckt Geschichten anders. Manche lieben bunte Bilder, andere suchen winzige Details oder möchten vor dem Schlafengehen in fantastische Welten eintauchen. Diese vier Buchwelten helfen dir beim Stöbern.</p>
       <div class="book-grid">
-        <article class="book-card"><div class="book-emoji">🦊📖</div><h3>Bilderbücher für kleine Entdecker</h3><p>Farbenfrohe Illustrationen, erste Geschichten und jede Menge Gesprächsstoff. Schaut gemeinsam die Bilder an, fragt euch, was als Nächstes passieren könnte, und erfindet eigene Geschichten dazu.</p></article>
-        <article class="book-card"><div class="book-emoji">🔎🌳</div><h3>Wimmelbücher zum Staunen</h3><p>Suchen, finden und immer wieder Neues entdecken: Wimmelbücher laden zum genauen Hinsehen ein. Lasst euch gegenseitig kleine Suchaufgaben stellen und erzählt, was auf den Seiten passiert.</p></article>
-        <article class="book-card"><div class="book-emoji">🌙🧸</div><h3>Vorlesebücher für gemütliche Abende</h3><p>Macht es euch bequem und wählt eine Geschichte, auf die ihr euch freut. Ein wiederkehrendes Buchritual kann den Tag ruhig ausklingen lassen – ganz ohne lange Vorbereitung.</p></article>
-        <article class="book-card"><div class="book-emoji">🎁🌈</div><h3>Buchgeschenke für Kinder</h3><p>Ein gutes Buchgeschenk passt zu den Interessen des Kindes: Tiere, Fahrzeuge, Natur, Freundschaft oder Fantasie. Achte auf Altersempfehlung, Textlänge und darauf, ob das Kind gerne zuhört oder selbst entdeckt.</p></article>
+        <article class="book-card"><div class="book-art art-lavender"><span>🦊📖</span></div><div class="book-card-copy"><h3>Bilderbücher für kleine Entdecker</h3><p>Farbenfrohe Illustrationen, erste Geschichten und jede Menge Gesprächsstoff. Schaut gemeinsam die Bilder an, fragt euch, was als Nächstes passieren könnte, und erfindet eigene Geschichten dazu.</p></div></article>
+        <article class="book-card"><div class="book-art art-blue"><span>🔎🌳</span></div><div class="book-card-copy"><h3>Wimmelbücher zum Staunen</h3><p>Suchen, finden und immer wieder Neues entdecken: Wimmelbücher laden zum genauen Hinsehen ein. Lasst euch gegenseitig kleine Suchaufgaben stellen und erzählt, was auf den Seiten passiert.</p></div></article>
+        <article class="book-card"><div class="book-art art-pink"><span>🌙🧸</span></div><div class="book-card-copy"><h3>Vorlesebücher für gemütliche Abende</h3><p>Macht es euch bequem und wählt eine Geschichte, auf die ihr euch freut. Ein wiederkehrendes Buchritual kann den Tag ruhig ausklingen lassen – ganz ohne lange Vorbereitung.</p></div></article>
+        <article class="book-card"><div class="book-art art-cream"><span>🎁🌈</span></div><div class="book-card-copy"><h3>Buchgeschenke für Kinder</h3><p>Ein gutes Buchgeschenk passt zu den Interessen des Kindes: Tiere, Fahrzeuge, Natur, Freundschaft oder Fantasie. Achte auf Altersempfehlung, Textlänge und darauf, ob das Kind gerne zuhört oder selbst entdeckt.</p></div></article>
       </div>
     </div>
   </section>
@@ -124,9 +138,9 @@
       <h2>Entdecke TRILUVI auch auf Pinterest</h2>
       <p class="book-section-intro">Du möchtest dir Ideen für später merken? Diese Themen eignen sich besonders gut für deine nächste Lesezeit. Speichere dir die Seite oder teile sie mit anderen Familien.</p>
       <div class="book-pin-list">
-        <article class="book-pin"><h3>📚 Kinderbücher entdecken</h3><p>Buchtipps und Ideen für kleine Leseratten – von Bilderbüchern bis zu Wimmelwelten.</p></article>
-        <article class="book-pin"><h3>🏕️ 5 gemütliche Lesestunden</h3><p>Einfache Ideen für eine Lesehöhle, gemeinsame Bilderabenteuer und ruhige Familienmomente.</p></article>
-        <article class="book-pin"><h3>🎁 Buchgeschenke für Kinder</h3><p>So findest du ein Buch, das zu den Interessen und Vorlieben eines Kindes passt.</p></article>
+        <article class="book-pin"><div class="book-pin-art">📚🌈</div><h3>Kinderbücher entdecken</h3><p>Buchtipps und Ideen für kleine Leseratten – von Bilderbüchern bis zu Wimmelwelten.</p></article>
+        <article class="book-pin"><div class="book-pin-art">🏕️🌙</div><h3>5 gemütliche Lesestunden</h3><p>Einfache Ideen für eine Lesehöhle, gemeinsame Bilderabenteuer und ruhige Familienmomente.</p></article>
+        <article class="book-pin"><div class="book-pin-art">🎁🦊</div><h3>Buchgeschenke für Kinder</h3><p>So findest du ein Buch, das zu den Interessen und Vorlieben eines Kindes passt.</p></article>
       </div>
       <a class="book-btn" href="entdecken.html#buecher">← Zurück zu TRILUVI Entdecken</a>
     </div>
